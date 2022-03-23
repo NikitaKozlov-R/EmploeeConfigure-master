@@ -26,7 +26,6 @@ namespace employeeDB {
 
 MainWindow::MainWindow()
 {
-    QFile* styleSheetFile = new QFile("style_sheet.css");
     styleSheetFile->open(QIODevice::ReadOnly);
     QString style = styleSheetFile->readAll();
 
@@ -58,10 +57,10 @@ MainWindow::MainWindow()
 
     informationLayout = new QVBoxLayout();
     informationLayout->addWidget(informationTitle);
-    informationLayout->addWidget(stockpileInformationWidget);
-    informationLayout->addWidget(deleteStockpileButton);
-    informationLayout->addWidget(productInformationWidget);
     informationLayout->addWidget(deleteProductButton);
+    informationLayout->addWidget(productInformationWidget);
+    informationLayout->addWidget(deleteStockpileButton);
+    informationLayout->addWidget(stockpileInformationWidget);
 
     makeStockpileLayout();
 
@@ -207,36 +206,6 @@ void MainWindow::makeProductInformationLayout(int productClickedId) {
                                              productQuery.value(productDB::PRODUCT_COUNT).toInt(),
                                              productQuery.value(productDB::SUPPLIER_ID).toInt(),
                                              productQuery.value(productDB::STOCKPILE_ID).toInt());
-
-    connect(productInformationWidget->getProductName(), SIGNAL(editingFinished()),
-            productInformationWidget, SLOT(nameLineEditDataChanged()));
-    connect(productInformationWidget, SIGNAL(nameChanged(QString,int)),
-            this, SLOT(productNameChanged(QString,int)));
-
-    connect(productInformationWidget->getProductWeight(), SIGNAL(editingFinished()),
-            productInformationWidget, SLOT(weightLineEditDataChanged()));
-    connect(productInformationWidget, SIGNAL(weightChanged(double,int)),
-            this, SLOT(productWeightChanged(double,int)));
-
-    connect(productInformationWidget->getProductCost(), SIGNAL(editingFinished()),
-            productInformationWidget, SLOT(costLineEditDataChanged()));
-    connect(productInformationWidget, SIGNAL(costChanged(int,int)),
-            this, SLOT(productCostChanged(int,int)));
-
-    connect(productInformationWidget->getProductCount(), SIGNAL(editingFinished()),
-            productInformationWidget, SLOT(countLineEditDataChanged()));
-    connect(productInformationWidget, SIGNAL(countChanged(int,int)),
-            this, SLOT(productCountChanged(int,int)));
-
-    connect(productInformationWidget->getProductSupplierId(), SIGNAL(editingFinished()),
-            productInformationWidget, SLOT(supplierIdLineEditDataChanged()));
-    connect(productInformationWidget, SIGNAL(supplierIdChanged(int,int)),
-            this, SLOT(productSupplierIdChanged(int,int)));
-
-    connect(productInformationWidget->getProductStockpileId(), SIGNAL(editingFinished()),
-            productInformationWidget, SLOT(stockpileIdLineEditDataChanged()));
-    connect(productInformationWidget, SIGNAL(stockpileIdChanged(int,int)),
-            this, SLOT(productStockpileIdChanged(int,int)));
 }
 
 void MainWindow::clearLayout(QLayout *layout) {

@@ -12,8 +12,8 @@ ProductScrollArea::ProductScrollArea(QWidget *parent) : QScrollArea(parent)
     this->setWidget(productWidget);
 }
 
-void ProductScrollArea::addProduct(int setId, QString setName, bool endOf) {
-    if(endOf == 1) {
+void ProductScrollArea::addProduct(int setId, QString setName, bool endOffset) {
+    if(endOffset == 1) {
         productButtons.push_back(new ProductWidget);
         productButtons[productButtons.size() - 1]->setInformation(setId, setName);
         makeLayout();
