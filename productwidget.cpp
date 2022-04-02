@@ -6,11 +6,11 @@ ProductWidget::ProductWidget(QWidget *parent) : QWidget(parent) {
     outputButton->setText("Показать параметры данного товара");
 
     productIdLabel = new QLabel;
-    productNameHeader = new QLabel;
+    productNameLabel = new QLabel;
 
     mainLayout = new QGridLayout;
     mainLayout->addWidget(productIdLabel, 0, 0);
-    mainLayout->addWidget(productNameHeader, 0, 1, 1, 2);
+    mainLayout->addWidget(productNameLabel, 0, 1, 1, 2);
     mainLayout->addWidget(outputButton, 1, 0, 1, 3);
 
     this->setLayout(mainLayout);
@@ -20,16 +20,14 @@ void ProductWidget::setInformation(int setId, QString setName) {
     productId = setId;
 
     productIdLabel->setText(QString::number(setId));
-    productNameHeader->setText(setName);
+    productNameLabel->setText(setName);
 }
 
 QPushButton* ProductWidget::getOutputButton() {
-    return outputButton.size();
+    return outputButton;
 }
 
 void ProductWidget::productButtonClickedToId() {
-    emit productButtonIdReturn(productId);
-    emit productButtonIdReturn(productId);
     emit productButtonIdReturn(productId);
 }
 

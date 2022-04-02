@@ -17,6 +17,8 @@ public:
 
     void setStockpileId(int);
     int getStockpileId() const;
+    void setStockpileName(QString setName);
+    void setStockpileCapacity(int setSapce);
 
 private:
     QPushButton* outputButton;

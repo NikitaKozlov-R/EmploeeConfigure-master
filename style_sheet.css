@@ -1,0 +1,44 @@
+/* QPushButton {
+  border: none;
+  outline: none;
+  width: 400px;
+  margin: 8px 16px;
+  border: 1px #808080 solid;
+  border-radius: 8px;
+  padding: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  background-color: #d3d3d3;
+}
+QScrollArea {
+  background-color: lightcyan;
+}
+QLabel {
+  color: red;
+}
+QLineEdit {
+  color: blue;
+}
+StockpileScrollArea {
+  background-color: aqua;
+}
+ProductScrollArea {
+  background-color: aqua;
+}
+WorkerScrollArea {
+  background-color: aqua;
+}
+
+QLabel#stockpile-title {
+  color: red;
+}
+Qlabel#product-title {
+  color: red;
+}
+QLabel#information-title {
+  color: red;
+}
+QWidget#product-container {
+  background-color: aqua;
+} */

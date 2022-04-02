@@ -33,6 +33,14 @@ void StockpileWidget::setStockpileInformation(int setSapce, int setProductCount,
     stockpileId = setId;
 }
 
+void StockpileWidget::setStockpileName(QString setName) {
+    stockpileNameLabel->setText("Имя склада - " + setName);
+}
+
+void StockpileWidget::setStockpileCapacity(int setSapce) {
+    stockpileSpace->setText("Общее место - " + QString::number(setSapce));
+}
+
 QPushButton* StockpileWidget::getOutputButton() const{
     return outputButton;
 }

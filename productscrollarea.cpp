@@ -6,14 +6,15 @@ ProductScrollArea::ProductScrollArea(QWidget *parent) : QScrollArea(parent)
 
     productLayout = new QVBoxLayout;
     productWidget = new QWidget;
+    productWidget->setObjectName("product-container");
 
     productWidget->setLayout(productLayout);
 
     this->setWidget(productWidget);
 }
 
-void ProductScrollArea::addProduct(int setId, QString setName, bool endOffset) {
-    if(endOffset == 1) {
+void ProductScrollArea::addProduct(int setId, QString setName, bool endOf) {
+    if(endOf == 1) {
         productButtons.push_back(new ProductWidget);
         productButtons[productButtons.size() - 1]->setInformation(setId, setName);
         makeLayout();

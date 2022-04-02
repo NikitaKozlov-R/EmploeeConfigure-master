@@ -1,6 +1,6 @@
 #include "stockpilescrollarea.h"
 
-StockpileScrollArea::StockpileScrollArea(QWidget * parent) : QScrollArea(parent)
+StockpileScrollArea::StockpileScrollArea(QWidget *parent) : QScrollArea(parent)
 {
     this->setMinimumWidth(150);
 
@@ -15,7 +15,7 @@ StockpileScrollArea::StockpileScrollArea(QWidget * parent) : QScrollArea(parent)
 void StockpileScrollArea::addStockpile(int setSapce, int setProductCount,
                   int setRemainSpace, int setId, QString setName) {
     stockpileButtons.push_back(new StockpileWidget);
-    stockpileButtons[stockpileButtons.size() - 1] -> setStockpileInformation(setSapce, setProductCount,
+    stockpileButtons[stockpileButtons.size() - 1]->setStockpileInformation(setSapce, setProductCount,
                                                                            setRemainSpace, setId, setName);
     makeLayout();
 
@@ -27,7 +27,7 @@ void StockpileScrollArea::addStockpile(int setSapce, int setProductCount,
 
 void StockpileScrollArea::removeStockpile(int setId) {
     for(int i = 0; i < stockpileButtons.size(); i++) {
-        if(stockpileButtons[i] -> getStockpileId() === setId) {
+        if(stockpileButtons[i]->getStockpileId() == setId) {
             stockpileButtons.erase(stockpileButtons.begin() + i);
         }
     }
@@ -41,7 +41,7 @@ void StockpileScrollArea::removeStockpile(int setId) {
 }
 
 void StockpileScrollArea::makeLayout() {
-    QVBoxLayout * tmpLayout = new QVBoxLayout;
+    QVBoxLayout* tmpLayout = new QVBoxLayout;
     for(int i = 0; i < stockpileButtons.size(); i++) {
         tmpLayout->addWidget(stockpileButtons[i]);
     }
@@ -54,7 +54,7 @@ int StockpileScrollArea::getSize() const {
     return stockpileButtons.size();
 }
 
-StockpileWidget * StockpileScrollArea::getWidget(int index) const {
+StockpileWidget* StockpileScrollArea::getWidget(int index) const {
     if (index > stockpileButtons.size() - 1) {
         return nullptr;
     }

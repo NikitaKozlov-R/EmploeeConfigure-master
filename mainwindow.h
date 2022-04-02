@@ -31,6 +31,8 @@ public:
     ~MainWindow();
     QString wordGenerate();
 
+    void makeTest();
+    void makeConnection();
     void makeStockpileLayout();
     void makeProductLayout(int);
     void makeStockpileInformationLayout(int);
@@ -64,4 +66,27 @@ private:
     int currentStockpileId = -1;
     int currentProductId = -1;
 
+public slots:
+    void stockpileButtonClicked(int);
+    void productButtonClicked(int getId);
 
+    void addStockpile();
+    void addProduct();
+
+    void deleteStockpile();
+    void deleteProduct();
+
+    void stockpileNameChanged();
+    void stockpileCapacityChanged();
+
+    void workerNameChanged(QString, int);
+    void workerStockpileChanged(int, int);
+
+    void productNameChanged(QString, int);
+    void productWeightChanged(double, int);
+    void productCostChanged(int, int);
+    void productCountChanged(int, int);
+    void productSupplierIdChanged(int, int);
+    void productStockpileIdChanged(int, int);
+};
+#endif // MAINWINDOW_H
