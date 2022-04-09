@@ -1,44 +1,68 @@
-/* QPushButton {
+QPushButton {
   border: none;
   outline: none;
   width: 400px;
-  margin: 8px 16px;
-  border: 1px #808080 solid;
-  border-radius: 8px;
-  padding: 4px;
+  height: 24px !important;
+  background-color: #6c757d;
+  color: white;
   font-size: 16px;
-  font-weight: bold;
-  color: #000;
-  background-color: #d3d3d3;
+  border-radius: 8px;
 }
-QScrollArea {
-  background-color: lightcyan;
-}
+
+/* QScrollArea {
+  background-color: #e9ecef;
+} */
+
 QLabel {
-  color: red;
+  color: black;
+  font-size: 16px;
+  margin-bottom: -6px;
 }
+
 QLineEdit {
-  color: blue;
+  color: black;
+  font-size: 14px;
+  margin-bottom: -2px;
+  background-color: #ced4da;
+  border-radius: 6px;
 }
+
 StockpileScrollArea {
-  background-color: aqua;
+  background-color: #f0f0f0;
+  border: none;
+  outline: none;
 }
+
 ProductScrollArea {
-  background-color: aqua;
+  background-color: #f0f0f0;
+  border: none;
+  outline: none;
+  border-left: 2px solid #6c757d;
+  border-right: 2px solid #6c757d;
 }
+
 WorkerScrollArea {
-  background-color: aqua;
+  background-color: #f0f0f0;
+  border: none;
+  outline: none;
+  border: 2px dashed #6c757d;
+  border-radius: 8px;
 }
 
 QLabel#stockpile-title {
-  color: red;
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
 }
+
 Qlabel#product-title {
-  color: red;
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
 }
+
 QLabel#information-title {
-  color: red;
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
 }
-QWidget#product-container {
-  background-color: aqua;
-} */
