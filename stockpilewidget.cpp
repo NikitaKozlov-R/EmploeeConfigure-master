@@ -28,13 +28,13 @@ void StockpileWidget::setStockpileInformation(int setSapce, int setProductCount,
     stockpileProductCount->setText("Количество товаров: " + QString::number(setProductCount));
     stockpileRemainSpace->setText("Свободно мест: " + QString::number(setRemainSpace));
     stockpileIdLabel->setText("ID склада: " + QString::number(setId));
-    stockpileNameLabel->setText("Склад " + setName);
+    stockpileNameLabel->setText(setName);
 
     stockpileId = setId;
 }
 
 void StockpileWidget::setStockpileName(QString setName) {
-    stockpileNameLabel->setText("Склад " + setName);
+    stockpileNameLabel->setText(setName);
 }
 
 void StockpileWidget::setStockpileCapacity(int setSapce) {

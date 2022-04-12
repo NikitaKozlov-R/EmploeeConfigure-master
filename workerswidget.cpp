@@ -6,9 +6,11 @@ WorkerWidget::WorkerWidget(QWidget *parent) : QWidget(parent)
     QLabel* workerIdLabel = new QLabel("ID:");
 
     workerName = new QLineEdit;
+    workerName->setMinimumWidth(320);
     QLabel* workerNameLabel = new QLabel("ФИО:");
 
     workerStockpile = new QLineEdit;
+    workerStockpile->setMinimumWidth(320);
     QLabel* workerStockpileLabel = new QLabel("Склад:");
 
     workerLayout = new QGridLayout;

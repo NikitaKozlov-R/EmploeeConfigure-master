@@ -10,8 +10,8 @@ ProductWidget::ProductWidget(QWidget *parent) : QWidget(parent) {
 
     mainLayout = new QGridLayout;
     mainLayout->addWidget(productIdLabel, 0, 0);
-    mainLayout->addWidget(productNameLabel, 0, 1, 1, 2);
-    mainLayout->addWidget(outputButton, 1, 0, 1, 3);
+    mainLayout->addWidget(productNameLabel, 0, 1, 1, 6);
+    mainLayout->addWidget(outputButton, 1, 0, 1, 7);
 
     this->setLayout(mainLayout);
 }
