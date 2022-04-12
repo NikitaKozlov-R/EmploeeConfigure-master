@@ -2,8 +2,8 @@
 
 ProductWidget::ProductWidget(QWidget *parent) : QWidget(parent) {
     outputButton = new QPushButton;
-    outputButton->setMinimumSize(200, 60);
-    outputButton->setText("Показать параметры данного товара");
+    outputButton->setMinimumSize(10, 40);
+    outputButton->setText("Параметры товара");
 
     productIdLabel = new QLabel;
     productNameLabel = new QLabel;

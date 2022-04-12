@@ -3,8 +3,8 @@
 StockpileWidget::StockpileWidget(QWidget *parent) : QWidget(parent)
 {
     outputButton = new QPushButton;
-    outputButton->setMinimumSize(400, 60);
-    outputButton->setText("Показать позиции данного склада");
+    outputButton->setMinimumSize(400, 40);
+    outputButton->setText("Товары и парметры");
 
     stockpileSpace = new QLabel;
     stockpileProductCount = new QLabel;
@@ -24,21 +24,21 @@ StockpileWidget::StockpileWidget(QWidget *parent) : QWidget(parent)
 }
 
 void StockpileWidget::setStockpileInformation(int setSapce, int setProductCount, int setRemainSpace, int setId, QString setName) {
-    stockpileSpace->setText("Общее место - " + QString::number(setSapce));
-    stockpileProductCount->setText("Количество продуктов - " + QString::number(setProductCount));
-    stockpileRemainSpace->setText("Оставшееся место - " + QString::number(setRemainSpace));
-    stockpileIdLabel->setText("Номер склада - " + QString::number(setId));
-    stockpileNameLabel->setText("Имя склада - " + setName);
+    stockpileSpace->setText("Общее место: " + QString::number(setSapce));
+    stockpileProductCount->setText("Количество товаров: " + QString::number(setProductCount));
+    stockpileRemainSpace->setText("Свободно мест: " + QString::number(setRemainSpace));
+    stockpileIdLabel->setText("ID склада: " + QString::number(setId));
+    stockpileNameLabel->setText("Склад " + setName);
 
     stockpileId = setId;
 }
 
 void StockpileWidget::setStockpileName(QString setName) {
-    stockpileNameLabel->setText("Имя склада - " + setName);
+    stockpileNameLabel->setText("Склад " + setName);
 }
 
 void StockpileWidget::setStockpileCapacity(int setSapce) {
-    stockpileSpace->setText("Общее место - " + QString::number(setSapce));
+    stockpileSpace->setText("Общее место: " + QString::number(setSapce));
 }
 
 QPushButton* StockpileWidget::getOutputButton() const{

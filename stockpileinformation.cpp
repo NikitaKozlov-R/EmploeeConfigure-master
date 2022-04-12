@@ -3,19 +3,19 @@
 StockpileInformation::StockpileInformation(QWidget *parent) : QWidget(parent)
 {
     stockpileId = new QLabel;
-    QLabel* stockpileIdLabel = new QLabel("ID склада");
+    QLabel* stockpileIdLabel = new QLabel("ID:");
 
     stockpileName = new QLineEdit;
-    QLabel* stockpileNameLabel = new QLabel("Название склада");
+    QLabel* stockpileNameLabel = new QLabel("Наименование:");
 
     stockpileCapacity = new QLineEdit;
-    QLabel* stockpileCapacityLabel = new QLabel("Вместимость склада");
+    QLabel* stockpileCapacityLabel = new QLabel("Вместимость:");
 
     stockpileProductsCount = new QLabel;
-    QLabel* stockpileProductsCountLabel = new QLabel("Количество товаров");
+    QLabel* stockpileProductsCountLabel = new QLabel("Занято:");
 
     stockpileRemainCapacity = new QLabel;
-    QLabel* stockpileRemainCapacityLabel = new QLabel("Оставшееся место");
+    QLabel* stockpileRemainCapacityLabel = new QLabel("Свободно:");
 
     stockpileLayout = new QGridLayout;
     stockpileLayout->addWidget(stockpileIdLabel, 0, 0, 1, 1);
@@ -30,7 +30,7 @@ StockpileInformation::StockpileInformation(QWidget *parent) : QWidget(parent)
     stockpileLayout->addWidget(stockpileRemainCapacity, 4, 1, 1, 2);
 
     workerScrollArea = new WorkerScrollArea;
-    QLabel* workerTitle = new QLabel("Работники");
+    QLabel* workerTitle = new QLabel("Сотрудники склада");
 
     mainLayout = new QVBoxLayout;
     mainLayout->addLayout(stockpileLayout);

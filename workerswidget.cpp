@@ -3,13 +3,13 @@
 WorkerWidget::WorkerWidget(QWidget *parent) : QWidget(parent)
 {
     workerId = new QLabel;
-    QLabel* workerIdLabel = new QLabel("ID работника");
+    QLabel* workerIdLabel = new QLabel("ID:");
 
     workerName = new QLineEdit;
-    QLabel* workerNameLabel = new QLabel("Имя работника");
+    QLabel* workerNameLabel = new QLabel("ФИО:");
 
     workerStockpile = new QLineEdit;
-    QLabel* workerStockpileLabel = new QLabel("Склад работника");
+    QLabel* workerStockpileLabel = new QLabel("Склад:");
 
     workerLayout = new QGridLayout;
     workerLayout->addWidget(workerIdLabel, 0, 0, 1, 1);

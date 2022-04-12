@@ -34,9 +34,9 @@ MainWindow::MainWindow()
     // makeTest();
 
     stockpileScrollArea = new StockpileScrollArea();
-    stockpileTitle = new QLabel("Список складов");
+    stockpileTitle = new QLabel("Склады");
     stockpileTitle->setObjectName("stockpile-title");
-    addNewStockpileButton = new QPushButton("Добавить новый склад");
+    addNewStockpileButton = new QPushButton("Новый склад");
     connect(addNewStockpileButton, SIGNAL(clicked()), this, SLOT(addStockpile()));
     addNewStockpileButton->setObjectName("addNewStockpileButton");
 
@@ -46,9 +46,9 @@ MainWindow::MainWindow()
     stockpileLayout->addWidget(addNewStockpileButton);
 
     productScrollArea = new ProductScrollArea();
-    productTitle = new QLabel("Список продуктов");
+    productTitle = new QLabel("Товары");
     productTitle->setObjectName("product-title");
-    addNewProductButton = new QPushButton("Добавить новый продукт");
+    addNewProductButton = new QPushButton("Новый товар");
     addNewProductButton->setEnabled(0);
     connect(addNewProductButton, SIGNAL(clicked()), this, SLOT(addProduct()));
 
@@ -64,7 +64,7 @@ MainWindow::MainWindow()
 
     deleteStockpileButton = new QPushButton("Удалить склад");
     connect(deleteStockpileButton, SIGNAL(clicked()), this, SLOT(deleteStockpile()));
-    deleteProductButton = new QPushButton("Удалить продукт");
+    deleteProductButton = new QPushButton("Удалить товар");
     connect(deleteProductButton, SIGNAL(clicked()), this, SLOT(deleteProduct()));
 
     informationLayout = new QVBoxLayout();

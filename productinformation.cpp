@@ -3,25 +3,25 @@
 ProductInformationWidget::ProductInformationWidget(QWidget *parent) : QWidget(parent)
 {
     productId = new QLabel;
-    QLabel* productIdLabel = new QLabel("ID продукта");
+    QLabel* productIdLabel = new QLabel("ID:");
 
     productName = new QLineEdit;
-    QLabel* productNameLabel = new QLabel("Название продукта");
+    QLabel* productNameLabel = new QLabel("Наименование:");
 
     productWeight = new QLineEdit;
-    QLabel* productCapacityLabel = new QLabel("Масса продукта");
+    QLabel* productCapacityLabel = new QLabel("Масса:");
 
     productCost = new QLineEdit;
-    QLabel* productCostLabel = new QLabel("Стоимость");
+    QLabel* productCostLabel = new QLabel("Стоимость:");
 
     productCount = new QLineEdit;
-    QLabel* productCountLabel = new QLabel("Количество");
+    QLabel* productCountLabel = new QLabel("Количество:");
 
     productSupplierId = new QLineEdit;
-    QLabel* productSupplierIdLabel = new QLabel("ID поставщика");
+    QLabel* productSupplierIdLabel = new QLabel("ID поставщика:");
 
     productStockpileId = new QLineEdit;
-    QLabel* productStockpileIdLabel = new QLabel("ID склада");
+    QLabel* productStockpileIdLabel = new QLabel("ID склада:");
 
     productLayout = new QGridLayout;
     productLayout->addWidget(productIdLabel, 0, 0, 1, 1);
