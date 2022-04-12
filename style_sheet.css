@@ -49,13 +49,13 @@ WorkerScrollArea {
   border-radius: 8px;
 }
 
-QLabel#stockpile-title {
+Qlabel#product-title {
   color: black;
   font-size: 32px;
   font-weight: bold;
 }
 
-Qlabel#product-title {
+QLabel#stockpile-title {
   color: black;
   font-size: 32px;
   font-weight: bold;
